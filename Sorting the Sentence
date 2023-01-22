@@ -1,0 +1,11 @@
+class Solution:
+    def sortSentence(self, s: str) -> str:
+        sentence = s.split()
+        n = len(sentence)
+        res = [""] * n
+        
+        for c in sentence:
+            i = int(c[-1])
+            res[i - 1] = c[:-1]
+        
+        return " ".join(res)
